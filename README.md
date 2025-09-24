@@ -30,8 +30,6 @@ This project is designed for:
 - [Database Schema](#-database-schema)
 - [Window Functions Implementation](#-window-functions-implementation)
 - [Results Analysis](#-results-analysis)
-- [Repository Structure](#-repository-structure)
-- [Screenshots](#-screenshots)
 - [References](#-references)
 
 ---
