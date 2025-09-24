@@ -1,5 +1,4 @@
-# 🚗 AutoMax Dealership Analytics System
-## PL/SQL Window Functions Mastery Project
+# 🚗📊 PL/SQL Window Functions Project – AutoMax Dealership Analytics System
 
 
 
@@ -91,6 +90,8 @@ CREATE TABLE locations (
     created_date DATE DEFAULT SYSDATE
 );
 ```
+<img width="1920" height="401" alt="location" src="https://github.com/user-attachments/assets/fa1ba8c5-a3ae-4157-8d90-23aeb4ae5881" />
+
 
 
 
@@ -110,14 +111,8 @@ CREATE TABLE customers (
 );
 ```
 
-| Column | Type | Purpose | Sample Value |
-|--------|------|---------|--------------|
-| `customer_id` | NUMBER (PK) | Unique customer identifier | 101 |
-| `name` | VARCHAR2(100) | Customer/company name | "Emmanuel Mugisha" |
-| `customer_type` | VARCHAR2(20) | Individual or Corporate | "Individual" |
-| `location` | VARCHAR2(50) | Customer's region | "Kigali" |
+<img width="1920" height="552" alt="customer" src="https://github.com/user-attachments/assets/5523c1d9-27ed-4fb5-b371-5d64e0860b54" />
 
----
 
 ### 🚗 Table: `vehicles`
 **Purpose:** Catalog vehicle inventory with detailed specifications and pricing for sales tracking and inventory management.
@@ -137,14 +132,8 @@ CREATE TABLE vehicles (
 );
 ```
 
-| Column | Type | Purpose | Sample Value |
-|--------|------|---------|--------------|
-| `vehicle_id` | NUMBER (PK) | Unique vehicle identifier | 201 |
-| `brand` | VARCHAR2(50) | Vehicle manufacturer | "Toyota" |
-| `model` | VARCHAR2(50) | Vehicle model | "Corolla" |
-| `price` | NUMBER(12,2) | Vehicle price in RWF | 15000 |
+<img width="1920" height="698" alt="vehicles" src="https://github.com/user-attachments/assets/4ba7e85d-1b38-4cad-a0e9-ad7a4046db6a" />
 
----
 
 ### 💰 Table: `sales`
 **Purpose:** Record all sales transactions linking customers, vehicles, and locations for comprehensive business analytics.
@@ -164,15 +153,12 @@ CREATE TABLE sales (
 );
 ```
 
-| Column | Type | Purpose | Sample Value |
-|--------|------|---------|--------------|
-| `sale_id` | NUMBER (PK) | Unique transaction identifier | 301 |
-| `customer_id` | NUMBER (FK) | References customers table | 101 |
-| `vehicle_id` | NUMBER (FK) | References vehicles table | 201 |
-| `sale_amount` | NUMBER(12,2) | Transaction value in RWF | 15000 |
+<img width="1920" height="712" alt="sales" src="https://github.com/user-attachments/assets/eaddfb9a-f819-40a6-909c-449d62807c18" />
+
 
 ### 🔗 ER Diagram
-![ER Diagram](screenshots/er_diagram.png)
+<img width="1920" height="1080" alt="ERD" src="https://github.com/user-attachments/assets/7155692c-acfd-4b33-a880-2c3af9cb35b4" />
+
 *Complete entity-relationship diagram showing all table relationships and constraints*
 
 ---
