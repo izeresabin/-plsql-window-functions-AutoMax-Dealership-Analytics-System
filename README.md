@@ -1,25 +1,53 @@
-# PL/SQL Window Functions Project – AutoMax Dealership Analytics System
+# 🚗📊 PL/SQL Window Functions Project – AutoMax Dealership Analytics System
 
-## Problem Definition
-*Business Context:* [Your text here]  
-*Data Challenge:* [Your text here]  
-*Expected Outcome:* [Your text here]  
+# 1.Problem Definition
 
-## Database Schema
-- Customers
-- Products
-- Transactions
-(ERD included: erd.png)
+## Business context
 
-## Success Criteria
-1. Top 5 products per region
-2. Running monthly totals
-3. Month-over-month growth
-4. Customer quartiles
-5. 3-month moving averages
+AutoMax is a nationwide car dealership with branches in Kigali, Musanze, and Huye. The company sells vehicles to both individual customers and corporate clients. Management wants better visibility into sales performance across time, customers, and branches.
 
-## Queries & Results
-(Include SQL query, screenshot of results, and a short explanation for each)
+## Data challenge
+
+Management lacks insight into who the top customers are, how sales evolve monthly, and how to categorize customers into spending tiers. 
+
+Without deeper analysis, decisions on promotions, inventory, and branch strategies are less effective.
+
+## Expected outcome
+
+By applying PL/SQL window functions, AutoMax will gain insights into:
+
+-Top customers by revenue
+
+-Monthly and cumulative sales trends
+
+-Month-over-month growth
+
+-Customer spending segments (quartiles)
+
+
+# 2.Success Criteria
+
+Here are 5 measurable goals (aligned with the assignment’s requirement):
+
+Top 5 customers by spending using RANK() or DENSE_RANK()
+→ Insight: Identify high-value customers for premium offers.
+
+Running monthly sales totals using SUM() OVER()
+→ Insight: Monitor cumulative revenue and growth trajectory.
+
+Month-over-month growth using LAG() or LEAD()
+→ Insight: Detect increases or decreases in sales performance.
+
+Customer quartiles using NTILE(4)
+→ Insight: Segment customers into spending groups (Q1 = top 25%, Q4 = lowest 25%).
+
+3-month moving average of sales using AVG() OVER (ROWS BETWEEN 2 PRECEDING AND CURRENT ROW)
+→ Insight: Smooth out sales fluctuations and track underlying trends.
+
+# Queries & Results
+
+# 3.Database schema
+
 
 ## Results Analysis
 - *Descriptive:* What happened?  
