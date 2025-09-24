@@ -92,14 +92,8 @@ CREATE TABLE locations (
 );
 ```
 
-| Column | Type | Purpose | Sample Value |
-|--------|------|---------|--------------|
-| `location_id` | NUMBER (PK) | Unique branch identifier | 1 |
-| `location_name` | VARCHAR2(100) | Branch name | "Kigali Branch" |
-| `manager` | VARCHAR2(100) | Branch manager | "Alice Uwimana" |
-| `address` | VARCHAR2(200) | Physical location | "KN 5 Rd, Kigali" |
 
----
+
 
 ### 👥 Table: `customers`
 **Purpose:** Maintain customer profiles for both individual and corporate clients to enable personalized service and targeted marketing.
