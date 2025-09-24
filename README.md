@@ -353,8 +353,8 @@ Collaboration was limited to concept discussions as permitted by academic guidel
 Ethical Compliance
 This project adheres to AUCA's academic integrity standards and professional database development ethics, emphasizing accuracy, transparency, and intellectual honesty in all analytical conclusions and technical implementations.
 
-“All sources were properly cited. Implementations and analysis represent original work. No AI
-generated content was copied without attribution or adaptation.”
+     “All sources were properly cited. Implementations and analysis represent original work. No AI
+     generated content was copied without attribution or adaptation.”
 
 ## 📞 Contact Information
 
