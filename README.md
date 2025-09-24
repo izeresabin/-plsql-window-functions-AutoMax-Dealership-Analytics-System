@@ -32,10 +32,8 @@ This project is designed for:
 - [Window Functions Implementation](#-window-functions-implementation)
 - [Results Analysis](#-results-analysis)
 - [Repository Structure](#-repository-structure)
-- [Installation & Usage](#-installation--usage)
 - [Screenshots](#-screenshots)
 - [References](#-references)
-- [Academic Integrity](#-academic-integrity)
 
 ---
 
@@ -77,9 +75,8 @@ This project demonstrates mastery of PL/SQL window functions through **5 measura
 
 ### 📊 Entity Relationship Overview
 ```
-locations (1) ────── (∞) sales (∞) ────── (1) customers
-                         │
-                         └── (1) vehicles
+<img width="1920" height="1080" alt="ERD" src="https://github.com/user-attachments/assets/93f32e7d-812d-44d7-9fac-128e7f5b2f0e" />
+
 ```
 
 ### 🏢 Table: `locations`
