@@ -185,7 +185,8 @@ ORDER BY total_spent DESC;
 **Interpretation:** This query identifies AutoMax's top customers by total purchase amount, assigning ranks where ties receive the same rank. Essential for VIP customer identification and loyalty program targeting.
 
 **📸 Screenshot:**
-![Top Customers by Spending](screenshots/01_ranking_top_customers.png)
+<img width="1920" height="1080" alt="1 RANKING FUNCTION" src="https://github.com/user-attachments/assets/57cf1057-ffec-4494-8168-04e51d8c32c8" />
+
 
 ---
 
@@ -207,7 +208,8 @@ ORDER BY month;
 **Interpretation:** Displays monthly sales alongside cumulative totals, enabling management to track overall business growth trajectory and identify seasonal patterns for strategic planning.
 
 **📸 Screenshot:**
-![Monthly Running Totals](screenshots/02_aggregate_running_totals.png)
+<img width="1920" height="1080" alt="2 AGGREGATE FUNCTION" src="https://github.com/user-attachments/assets/f8a123ac-f3a5-4e44-ac55-e7554965fb81" />
+
 
 ---
 
@@ -236,7 +238,7 @@ ORDER BY month;
 **Interpretation:** Calculates month-over-month growth percentages using LAG() to access previous month's data. Critical for identifying growth trends, seasonal impacts, and performance acceleration or deceleration.
 
 **📸 Screenshot:**
-![Month-over-Month Growth](screenshots/03_navigation_mom_growth.png)
+<img width="1920" height="1080" alt="3 NAVIGATION FUNCTION" src="https://github.com/user-attachments/assets/f3afbbbe-4f4e-4a17-bbe4-268419bea236" />
 
 ---
 
@@ -261,36 +263,14 @@ ORDER BY total_spent DESC;
 **Interpretation:** Segments customers into four equal groups (quartiles) where Q1 represents top spenders. Enables targeted marketing strategies: premium services for Q1, retention programs for Q2-Q3, and acquisition campaigns for Q4.
 
 **📸 Screenshot:**
-![Customer Quartile Segmentation](screenshots/04_distribution_customer_quartiles.png)
+<img width="1920" height="1080" alt="4 DISTRIBUTION FUNCTION" src="https://github.com/user-attachments/assets/ccb94c5a-09c4-42ba-91f1-57dae97ac91d" />
+
 
 ---
 
-### 5️⃣ Advanced Analytics - Moving Averages
 
-**Business Question:** *What are the smoothed sales trends without monthly fluctuations?*
 
-```sql
--- 3-month moving average for trend analysis
-SELECT 
-    TO_CHAR(sale_date, 'YYYY-MM') AS month,
-    SUM(sale_amount) AS monthly_sales,
-    ROUND(AVG(SUM(sale_amount)) OVER (
-        ORDER BY TO_CHAR(sale_date, 'YYYY-MM') 
-        ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
-    ), 2) AS moving_avg_3m
-FROM sales
-GROUP BY TO_CHAR(sale_date, 'YYYY-MM')
-ORDER BY month;
-```
-
-**Interpretation:** Smooths short-term fluctuations using a 3-month rolling average, revealing underlying sales trends for better forecasting and inventory planning decisions.
-
-**📸 Screenshot:**
-![3-Month Moving Average](screenshots/05_advanced_moving_averages.png)
-
----
-
-## 📊 Results Analysis
+# 📊 Results Analysis
 
 ### 📈 Descriptive Analytics - What Happened?
 
@@ -328,90 +308,9 @@ Strategic recommendations based on analytical insights:
 
 ---
 
-## 📁 Repository Structure
 
-```
-plsql-window-functions-izere-sabin/
-│
-├── 📄 README.md                    # This comprehensive documentation
-├── 🗃️ sql-scripts/
-│   ├── 01_schema_creation.sql      # Complete database schema + data
-│   ├── 02_window_functions.sql     # All analytical queries
-│   └── 03_sample_data.sql          # Additional test data (optional)
-│
-├── 📸 screenshots/
-│   ├── er_diagram.png              # Database design visualization
-│   ├── 01_ranking_top_customers.png
-│   ├── 02_aggregate_running_totals.png
-│   ├── 03_navigation_mom_growth.png
-│   ├── 04_distribution_customer_quartiles.png
-│   └── 05_advanced_moving_averages.png
-│
-├── 📋 documentation/
-│   ├── business_requirements.md    # Detailed business analysis
-│   ├── technical_specifications.md # Database design decisions
-│   └── user_guide.md              # Implementation instructions
-│
-└── 🔧 utilities/
-    ├── performance_indexes.sql     # Database optimization
-    └── data_validation.sql         # Quality assurance queries
-```
 
----
-
-## 🚀 Installation & Usage
-
-### Prerequisites
-- Oracle Database 12c or later
-- SQL*Plus or Oracle SQL Developer
-- Appropriate database privileges (CREATE TABLE, INSERT, SELECT)
-
-### Quick Start
-
-1. **Clone Repository**
-   ```bash
-   git clone https://github.com/yourusername/plsql-window-functions-izere-sabin.git
-   cd plsql-window-functions-izere-sabin
-   ```
-
-2. **Database Setup**
-   ```sql
-   @sql-scripts/01_schema_creation.sql
-   ```
-
-3. **Execute Analytics**
-   ```sql
-   @sql-scripts/02_window_functions.sql
-   ```
-
-4. **Verify Results**
-   - Compare output screenshots with provided examples
-   - Validate data integrity using utilities/data_validation.sql
-
-### Performance Optimization
-```sql
--- Key indexes for analytical queries
-CREATE INDEX idx_sales_date ON sales(sale_date);
-CREATE INDEX idx_sales_customer ON sales(customer_id);
-CREATE INDEX idx_sales_amount ON sales(sale_amount);
-```
-
----
-
-## 📸 Screenshots
-
-| Analysis Type | Screenshot | Description |
-|---------------|------------|-------------|
-| **Customer Ranking** | ![Ranking](screenshots/01_ranking_top_customers.png) | Top customers by total spending with RANK() |
-| **Running Totals** | ![Aggregates](screenshots/02_aggregate_running_totals.png) | Monthly sales with cumulative totals |
-| **Growth Analysis** | ![Navigation](screenshots/03_navigation_mom_growth.png) | Month-over-month growth percentages |
-| **Segmentation** | ![Distribution](screenshots/04_distribution_customer_quartiles.png) | Customer quartile classification |
-| **Trend Analysis** | ![Moving Average](screenshots/05_advanced_moving_averages.png) | 3-month moving averages |
-| **Database Design** | ![ER Diagram](screenshots/er_diagram.png) | Complete entity-relationship model |
-
----
-
-## 📚 References
+# 📚 References
 
 1. **Oracle Corporation** (2024). *Oracle Database SQL Language Reference - Analytic Functions*. Oracle Documentation Library. https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Analytic-Functions.html
 
@@ -439,27 +338,28 @@ CREATE INDEX idx_sales_amount ON sales(sale_amount);
 
 ---
 
-## 🛡️ Academic Integrity
+# 🛡️ Academic Integrity
 
-### Original Work Declaration
-This **AutoMax Dealership Analytics System** represents original academic work developed independently for the Database Development with PL/SQL course. All SQL implementations, analytical interpretations, and business insights were created specifically for this assignment.
+Original Work Declaration
+This AutoMax Dealership Analytics System represents original academic work developed independently for the Database Development with PL/SQL course. All SQL implementations, analytical interpretations, and business insights were created specifically for this assignment.
+Intellectual Honesty Statement
 
-### Intellectual Honesty Statement
-- **No AI-generated content** was copied without proper attribution or adaptation
-- **All external sources** are properly cited in the References section above  
-- **Code implementations** represent original problem-solving and technical skill development
-- **Business analysis** reflects independent critical thinking and application of course concepts
-- **Collaboration** was limited to concept discussions as permitted by academic guidelines
+No AI-generated content was copied without proper attribution or adaptation
+All external sources are properly cited in the References section above
+Code implementations represent original problem-solving and technical skill development
+Business analysis reflects independent critical thinking and application of course concepts
+Collaboration was limited to concept discussions as permitted by academic guidelines
 
-### Ethical Compliance
+Ethical Compliance
 This project adheres to AUCA's academic integrity standards and professional database development ethics, emphasizing accuracy, transparency, and intellectual honesty in all analytical conclusions and technical implementations.
 
----
+“All sources were properly cited. Implementations and analysis represent original work. No AI
+generated content was copied without attribution or adaptation.”
 
 ## 📞 Contact Information
 
 **Student:** IZERE Sabin Patience  
-**Email:** [sabin.izere@student.auca.ac.rw]  
+**Email:** [izeresabinpatience@gmail.com]  
 **Course:** Database Development with PL/SQL (INSY 8311)  
 **Instructor:** Eric Maniraguha (eric.maniraguha@auca.ac.rw)  
 **Institution:** Adventist University of Central Africa (AUCA)  
