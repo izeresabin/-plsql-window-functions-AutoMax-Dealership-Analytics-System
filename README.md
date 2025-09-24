@@ -74,10 +74,9 @@ This project demonstrates mastery of PL/SQL window functions through **5 measura
 ## 🗄️ Database Schema
 
 ### 📊 Entity Relationship Overview
-```
+
 <img width="1920" height="1080" alt="ERD" src="https://github.com/user-attachments/assets/93f32e7d-812d-44d7-9fac-128e7f5b2f0e" />
 
-```
 
 ### 🏢 Table: `locations`
 **Purpose:** Store AutoMax branch information and management details for geographic sales analysis.
