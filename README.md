@@ -1,6 +1,4 @@
-# -plsql-window-functions_AutoMax-Dealership-Analytics-System
-
-# PL/SQL Window Functions Project – Coffee Shop Chain
+# PL/SQL Window Functions Project – AutoMax Dealership Analytics System
 
 ## Problem Definition
 *Business Context:* [Your text here]  
