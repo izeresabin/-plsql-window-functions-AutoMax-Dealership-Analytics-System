@@ -1,9 +1,7 @@
 # 🚗 AutoMax Dealership Analytics System
 ## PL/SQL Window Functions Mastery Project
 
-[![Oracle](https://img.shields.io/badge/Oracle-SQL-red?style=flat-square&logo=oracle)](https://www.oracle.com/database/)
-[![PL/SQL](https://img.shields.io/badge/PL%2FSQL-Window%20Functions-blue?style=flat-square)](https://docs.oracle.com/en/database/)
-[![Status](https://img.shields.io/badge/Status-Complete-success?style=flat-square)]()
+
 
 ---
 
